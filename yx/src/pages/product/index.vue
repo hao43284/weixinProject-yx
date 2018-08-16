@@ -1,0 +1,147 @@
+<template>
+  <div>
+    <div>
+      <video class="video" :src="video" controls ></video>
+    </div>
+    <div class="productMiniDesc">
+      <div class="productName">
+        新秀丽百变箱子
+      </div>
+      <div class="productPrice">
+        ￥499.00
+      </div>
+    </div>
+    <div class="selectStandard">
+      数量规格选择
+    </div>
+    <div class="productBodyDesc">
+      <wxParse :content="article" @preview="preview" @navigate="navigate" />
+    </div>
+    <div class="buyOperationWrap">
+      <div class="leftBtn">
+        <div class="homeBg"></div>
+        <div class="shopBG"></div>
+      </div>
+      <div class="rightBtn">
+        <div class="immediately">
+          立刻购买
+        </div>
+        <div class="addCar">
+          加入购物车
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+import wxParse from 'mpvue-wxparse'
+export default {
+  components: {
+    wxParse
+  },
+  data () {
+    return {
+      article: '<div>我是HTML代码</div>',
+      video: 'http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400'
+    }
+  },
+  methods: {
+    preview (src, e) {
+      // do something
+    },
+    navigate (href, e) {
+      // do something
+    }
+  },
+  onLoad () {
+  }
+}
+</script>
+
+<style>
+@import url("~mpvue-wxparse/src/wxParse.css");
+page {
+  background-color: #f4f4f4;
+}
+.leftBtn {
+  display: flex;
+  justify-content: flex-start;
+}
+.leftBtn div {
+  width: 50px;
+  height: 100%;
+  border-right: 1px solid rgb(53, 13, 13);
+}
+.homeBg {
+  background: url('../../../static/icon/home.png') no-repeat;
+  background-size: 24px;
+  background-position: center;
+}
+.shopBG {
+  background: url('../../../static/icon/car.png') no-repeat;
+  background-size: 24px;
+  background-position: center;
+}
+.buyOperationWrap {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  line-height: 50px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #FAFAFA;
+}
+.rightBtn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 16px;
+  color: #333;
+  height: 100%;
+}
+.rightBtn div {
+  padding: 0 10px;
+  height: 100%;
+  border-left: 1px solid #eee;
+}
+.rightBtn div:last-child {
+  background-color: #B7292E;
+  color: #FFF;
+}
+
+
+.video {
+  width: 100%;
+  height: 220px;
+}
+.productMiniDesc {
+  background-color: #FFF;
+  padding: 10px 3%;
+}
+.productName {
+  font-size: 16px;
+  color: #333;
+}
+.productPrice {
+  color: #B7292E;
+  font-size: 16px;
+}
+.selectStandard {
+  margin-top: 10px;
+  padding: 0 3%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  color: #333;
+  background: url('../../../static/icon/me_right.png') no-repeat;
+  background-size: 18px 18px;
+  background-position: center right;
+  background-color: #FFF;
+}
+.productBodyDesc {
+  margin-top: 10px;
+  background-color: #FFF;
+}
+</style>
