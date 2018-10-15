@@ -26,7 +26,7 @@ export default {
       try {
         res = await wxp.request({
           // url: utils.getRequestUrl() + "/get_jwt",
-          // url: 'https://www.qimingzizeinan.com/wx/user/loginbycode',
+          // url: 'http://47.104.208.65/wx/user/loginbycode',
           url: 'http://localhost:8090/wx/user/loginbycode',
           data: {
             code: _login.code,

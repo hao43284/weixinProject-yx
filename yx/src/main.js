@@ -14,7 +14,7 @@ export default {
     pages: ['pages/logs/main',
       'pages/index/main',
       'pages/yx_index/main',
-      'pages/login/main',
+      '^pages/login/main',
       'pages/car/main',
       'pages/me/main',
       'pages/address/list/main',
@@ -22,7 +22,7 @@ export default {
       'pages/address/edit/main',
       'pages/confirmProduct/main',
       'pages/order/list/main',
-      '^pages/product/main'
+      'pages/product/main'
     ],
     window: {
       backgroundTextStyle: 'light',

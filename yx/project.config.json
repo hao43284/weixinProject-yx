@@ -9,7 +9,7 @@
 	},
 	"miniprogramRoot": "./dist/",
 	"compileType": "miniprogram",
-	"appid": "wx4e31a3729f5cefb2",
+	"appid": "wxbb94651c6730cfcf",
 	"projectname": "yx",
 	"libVersion": "1.5.4",
 	"condition": {

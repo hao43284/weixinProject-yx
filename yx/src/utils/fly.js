@@ -1,7 +1,7 @@
 var Fly = require("flyio/dist/npm/wx") 
 const fly = new Fly;
 // 配置请求基地址
-fly.config.baseURL = 'https://www.qimingzizeinan.com/'
+fly.config.baseURL = 'http://localhost:8090/'
 if (process.env.NODE_ENV === 'development') {
   fly.config.baseURL = 'http://localhost:8090/'
 }

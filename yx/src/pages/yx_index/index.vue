@@ -5,7 +5,7 @@
       autoplay="true" interval="3000" duration="1000">
       <block v-for="(item,index) in interfaceData.bannerlist" v-bind:key='index'>
         <swiper-item>
-          <navigator :url="item.type === 2? '../index/main' : '../logs/main'">
+          <navigator :url="item.type === 2? '../index/main' : '../product/main?navigation_id='+ item.navigation_id">
             <image class="swiper_img" :src="item.navigation_app_url"/>
           </navigator>
           <!-- <image src="{{item.}}" class="slide-image" width="355" height="150"/> -->
@@ -14,7 +14,7 @@
     </swiper>
     <div class="category_list">
       <div v-for="(item, index) in interfaceData.navigationlist" v-bind:key="index" class="category_item">
-        <navigator url="../index/main">
+        <navigator url="../product/main?navigation_id='+ item.navigation_id">
           <div class="category_item_wrap">
             <img :src="item.categoryIconUrl" alt="">
             <div>

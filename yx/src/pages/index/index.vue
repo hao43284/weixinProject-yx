@@ -61,14 +61,14 @@ export default {
       let _userInfo = await wxp.getUserInfo().catch((err) => {
         console.log('err', err)
       })
-      // let res = await fly.get('https://www.qimingzizeinan.com/wx/user/loginbycode', {
+      // let res = await fly.get('http://47.104.208.65/wx/user/loginbycode', {
       //   code: _login.code,
       //   encryptedData: _userInfo.encryptedData,
       //   iv: _userInfo.iv
       // })
       let res = await wxp.request({
         // url: utils.getRequestUrl() + "/get_jwt",
-        url: 'https://www.qimingzizeinan.com/wx/user/loginbycode',
+        url: 'http://47.104.208.65/wx/user/loginbycode',
         data: {
           code: _login.code,
           encryptedData: _userInfo.encryptedData,
@@ -89,6 +89,7 @@ export default {
   created () {
     // 调用应用实例的方法获取全局数据
     // this.getUserInfo()
+    console.log('created')
   }
 }
 </script>
